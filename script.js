@@ -36,7 +36,6 @@ function Handler(url){
             WhatsFavoriteLanguage(data.repos_url)
             ErrorsHandler("New")
 
-            // alert(document.cookie)
         }
 
 
@@ -50,26 +49,40 @@ function Handler(url){
 function WhatsFavoriteLanguage(URL){
     fetch(URL).then(function(response) {
         return response.json();
-    }).then(function(data) {
-        var id = data[1].language
-        const languages = [data[0].language, data[1].language, data[2].language, data[3].language, data[4].language];
+    }).then(async function (data) {
+        let length = 0
+        if (data.length <= 5){
+            length = data.length
+        }
+        else {
+            length = 5;
+        }
+
+        const languages = ["", "", "", "", ""]
+        for (let i = 0; i < length; i++) {
+            if (data[i].language) {
+                languages[i] = data[i].language
+            }
+        }
+
         const cn = [0, 0, 0, 0, 0]
-        for (let i = 0 ; i < 5 ; i++){
-            if (data[i].language){
+        for (let i = 0; i < length; i++) {
+            if (data[i].language) {
                 switch (data[i].language) {
-                    case data[0].language:
+                    case languages[0]:{
                         cn[0]++
                         break;
-                    case data[1].language:
+                    }
+                    case languages[1]:
                         cn[1]++
                         break;
-                    case data[2].language:
+                    case languages[2]:
                         cn[2]++
                         break;
-                    case data[3].language:
+                    case languages[3]:
                         cn[3]++
                         break;
-                    case data[4].language:
+                    case languages[4]:
                         cn[4]++
                         break;
                 }
@@ -79,9 +92,14 @@ function WhatsFavoriteLanguage(URL){
         var FL = "Favorite language : ";
         FL += languages[index];
         setLanguage(languages[index])
-        document.getElementById("language").innerHTML=FL;
+        document.getElementById("language").innerHTML = FL;
+
+        for (let i = 0; i < 5; i++) {
+            languages[i] = "";
+        }
+
+
     }).catch(function(err) {
-        console.log('Fetch Error :-S', err);
     });
 
 }
