@@ -2,7 +2,7 @@ function Main(){
     var username = document.getElementById("t1").value;
     var url = "https://api.github.com/users/"
     url += username
-    alert(username)
+
     if (getCookie("User") === username){
         setInfo(getCookie("User"), getCookie("Blog"), getCookie("Location"), getCookie("Bio"), getCookie("Img") )
         ErrorsHandler("Cookie");
