@@ -1,3 +1,7 @@
+/* This block is related to the whole of our body,
+ which contains basic settings such as the background image
+ URLs are used in all the images so that there is less dependence on the image file
+ */
 body{
     background-image: url("https://wallpaperaccess.com/full/1092758.jpg");
     background-repeat: no-repeat;
@@ -8,12 +12,22 @@ body{
     justify-content: center;
     align-items: center;
 }
+/*
+This block is related to the rows of the table
+ and its initial settings are like the middle of the fold!
+ */
 td{
     text-align: center;
     word-wrap:break-word;
     white-space:nowrap;
 
 }
+
+/*
+Our project contains two sections or the same panel that is created using div.
+This is the main div where user information is displayed!
+As well as basic settings such as background color and opacity, etc
+ */
 .main {
     height: 250px;
     width: 400px;
@@ -28,11 +42,18 @@ td{
     margin-bottom: 12%;
     margin-right: 50px;
 }
+/*
+This is related to our default avatar photo with its height, width and roundness values :
+ */
 .img1{
     border-radius: 50%;
     width: 150px;
     height: 150px;
 }
+
+/*
+This block is related to the second image or the GitHub logo
+ */
 .img2{
     display: block;
     margin-left: auto;
@@ -40,6 +61,11 @@ td{
     width: 50px;
     height: 50px;
 }
+/*
+This block is related to our second most important div
+ It means the right panel,
+  where the button and our text input and the GitHub logo with a span to display the error are located.
+ */
 .sec {
     height: 250px;
     border: solid;
@@ -52,21 +78,39 @@ td{
     margin-bottom: 12%;
     margin-right: 50px;
 }
+/*
+This block is for adjusting the size of the submit button with the input section
+ */
 .b1{
 
     width: 157px;
 
 }
+
+/*
+This block is for adjusting the size of the search section with button and ...
+ */
 .t1{
     width: 150px;
     margin-top: 10px ;
 }
+
+/*
+This block is for the bio section,
+ including being in the middle of the fold and adjusting it with the top lines of the table
+ */
+
 .bio{
     width:225px;
     text-align: center;
     word-wrap:break-word;
     white-space:nowrap;
 }
+
+/*
+This block is for the error handling section,
+ which is in the middle of the fold and in the middle of the input and button section
+ */
 span{
     text-align: center;
     display: block;
