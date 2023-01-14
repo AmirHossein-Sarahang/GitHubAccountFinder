@@ -29,7 +29,7 @@ This is the main div where user information is displayed!
 As well as basic settings such as background color and opacity, etc
  */
 .main {
-    height: 300px;
+    height: 275px;
     width: 400px;
     display: grid;
     border: solid;
@@ -67,7 +67,7 @@ This block is related to our second most important div
   where the button and our text input and the GitHub logo with a span to display the error are located.
  */
 .sec {
-    height: 300px;
+    height: 275px;
     border: solid;
     border-color: black;
     border-radius: 30px;
@@ -103,7 +103,10 @@ This block is for the bio section,
 .bio{
     width:225px;
     text-align: center;
+    font-size: 14px;
+    white-space:pre-wrap;
     word-wrap:break-word;
+
 
 }
 
