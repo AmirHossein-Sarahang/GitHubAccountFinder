@@ -18,8 +18,8 @@ This block is related to the rows of the table
  */
 td{
     text-align: center;
-    word-wrap:break-word;
-    white-space:nowrap;
+    word-break: break-all
+
 
 }
 
@@ -29,7 +29,7 @@ This is the main div where user information is displayed!
 As well as basic settings such as background color and opacity, etc
  */
 .main {
-    height: 250px;
+    height: 300px;
     width: 400px;
     display: grid;
     border: solid;
@@ -67,7 +67,7 @@ This block is related to our second most important div
   where the button and our text input and the GitHub logo with a span to display the error are located.
  */
 .sec {
-    height: 250px;
+    height: 300px;
     border: solid;
     border-color: black;
     border-radius: 30px;
@@ -104,7 +104,7 @@ This block is for the bio section,
     width:225px;
     text-align: center;
     word-wrap:break-word;
-    white-space:nowrap;
+
 }
 
 /*
